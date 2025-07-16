@@ -19,6 +19,6 @@ $colors.Keys | ForEach-Object {
     for ($i = 1; $i -le 15; $i++) {
         $imageFileName = "marker_$($colorName)_$($i.ToString("00")).png"
         magick $baseImageFileName -fill $backgroundColor -opaque $baseImagebackgroundColor $imageFileName
-        magick mogrify -font "Arial" -pointsize 16 -fill $foregroundColor -stroke $foregroundColor -strokewidth 0 -gravity Center -annotate "+0-10" $i $imageFileName
+        magick mogrify -font "Arial" -pointsize 14 -fill $foregroundColor -stroke $foregroundColor -strokewidth 0 -gravity Center -annotate "+0-10" $i $imageFileName
     }
 }
